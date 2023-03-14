@@ -76,8 +76,10 @@ public class FIVE : MonoBehaviour
                 if (--lives == 0) //si tras restar una vida, no men queden, gameover
                 {
                     SetText();
-                    
-                    
+
+                    //change the color to red when game over
+                    _material.color = Color.red;
+
                     //aturar es temps
                     isGameOver = true;
 
