@@ -1046,7 +1046,7 @@ MonoBehaviour:
   - {r: 0.60008013, g: 0.8207547, b: 0.60221046, a: 0}
   - {r: 0.7830189, g: 0.48307484, b: 0.22530258, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0.70573, g: 0.745283, b: 0.2285066, a: 0}
   llistaColors: 
   randomNumColor: 0
 --- !u!82 &1057937373
@@ -1567,7 +1567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1937475618
 RectTransform:
   m_ObjectHideFlags: 0

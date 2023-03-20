@@ -77,7 +77,7 @@ public class FIVE : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            instrucitonsPanel.SetActive(true);
+            instrucitonsPanel.SetActive(false);
 
             Time.timeScale = 1;
 
@@ -104,18 +104,16 @@ public class FIVE : MonoBehaviour
 
             randomNumColor = Random.Range(0, colors.Length);
 
-            while (llistaColors.Contains(randomNumColor))
-            {
-                randomNumColor = Random.Range(0, colors.Length);
-            }
-            _cameraREF.backgroundColor = colors[randomNumColor];
-
-            llistaColors.Add(randomNumColor);
-
-
             if (hasBeenClicked == false)
             {
                 _audiosource.PlayOneShot(soundLoose, 1); //sona "soundGameOver" per cada vegada que no hem pitjat damunt sa bolla 
+
+                
+                randomNumColor = Random.Range(0, colors.Length);
+               
+                _cameraREF.backgroundColor = colors[randomNumColor];
+
+                llistaColors.Add(randomNumColor);
 
                 if (--lives == 0) //si tras restar una vida, no men queden, gameOver
                 {
@@ -141,10 +139,6 @@ public class FIVE : MonoBehaviour
             transform.position = GenerateRandomPos();
 
             hasBeenClicked = false; //reset que hagui pitjat o no 
-
-            gameOverPanel.SetActive(false); //quan no morim no surt es panel
-
-            llistaColors.Remove(randomNumColor);
         }
 
     }
